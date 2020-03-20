@@ -15,55 +15,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pGx-Pm-Szu">
-                                <rect key="frame" x="20" y="538" width="374" height="228"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beerbckgrnd" translatesAutoresizingMaskIntoConstraints="NO" id="0c9-G9-Rxc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkB-m2-Vx8">
+                                <rect key="frame" x="127.5" y="587" width="159" height="30"/>
+                                <state key="normal" title="Random download IMG"/>
+                                <connections>
+                                    <action selector="downloadBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4JH-pP-ccc"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pGx-Pm-Szu">
+                                <rect key="frame" x="154" y="450" width="106" height="111"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="228" id="1Bs-pl-FWB"/>
+                                    <constraint firstAttribute="height" constant="111" id="PsH-MU-Okd"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xxn-0Z-aD7">
-                                <rect key="frame" x="20" y="194" width="373" height="328"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xxn-0Z-aD7">
+                                <rect key="frame" x="20" y="194" width="374" height="225"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="328" id="sNd-vK-JgN"/>
+                                    <constraint firstAttribute="height" constant="225" id="NyI-OF-6x4"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zhL-d5-G3b">
-                                <rect key="frame" x="43" y="152" width="329" height="34"/>
-                                <nil key="textColor"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zhL-d5-G3b">
+                                <rect key="frame" x="189.5" y="123" width="35" height="42"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkB-m2-Vx8">
-                                <rect key="frame" x="156" y="800" width="100" height="38"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJd-9s-tbR">
+                                <rect key="frame" x="128" y="679" width="158" height="30"/>
+                                <state key="normal" title="Upload selected image"/>
                                 <connections>
-                                    <action selector="downloadBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4JH-pP-ccc"/>
+                                    <action selector="saveBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zE7-Xo-9k4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66P-5F-oGZ">
+                                <rect key="frame" x="169.5" y="625" width="75" height="30"/>
+                                <state key="normal" title="Select IMG"/>
+                                <connections>
+                                    <action selector="uploadImgBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wni-hj-eIh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dcH-1O-AmE">
+                                <rect key="frame" x="158" y="717" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="DELETE NOTE"/>
+                                <connections>
+                                    <action selector="deleteNoteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8in-wN-FNw"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="zhL-d5-G3b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="CnI-EN-jWg"/>
-                            <constraint firstItem="zhL-d5-G3b" firstAttribute="trailing" secondItem="Xxn-0Z-aD7" secondAttribute="trailing" constant="-21" id="Ft1-5k-YfB"/>
-                            <constraint firstItem="zhL-d5-G3b" firstAttribute="centerX" secondItem="pGx-Pm-Szu" secondAttribute="centerX" id="K4H-u5-r5S"/>
-                            <constraint firstItem="zhL-d5-G3b" firstAttribute="leading" secondItem="Xxn-0Z-aD7" secondAttribute="leading" constant="23" id="TbE-wr-aE8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gkB-m2-Vx8" secondAttribute="bottom" constant="24" id="c0N-CM-e82"/>
-                            <constraint firstItem="pGx-Pm-Szu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eRo-Sh-yev"/>
-                            <constraint firstItem="gkB-m2-Vx8" firstAttribute="top" secondItem="pGx-Pm-Szu" secondAttribute="bottom" constant="34" id="ftJ-Rq-8cr"/>
-                            <constraint firstItem="pGx-Pm-Szu" firstAttribute="centerX" secondItem="gkB-m2-Vx8" secondAttribute="centerX" constant="1" id="goY-f8-vgJ"/>
-                            <constraint firstItem="Xxn-0Z-aD7" firstAttribute="top" secondItem="zhL-d5-G3b" secondAttribute="bottom" constant="8" id="hre-W6-jWK"/>
-                            <constraint firstItem="zhL-d5-G3b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="rym-Vi-2KR"/>
-                            <constraint firstItem="gkB-m2-Vx8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="sod-fL-yNz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gkB-m2-Vx8" secondAttribute="trailing" symbolic="YES" id="yfS-6i-7ns"/>
+                            <constraint firstItem="gkB-m2-Vx8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4A2-tv-rtj"/>
+                            <constraint firstItem="Xxn-0Z-aD7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5O5-so-lyM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0c9-G9-Rxc" secondAttribute="trailing" constant="-20" id="983-e6-Kjx"/>
+                            <constraint firstItem="66P-5F-oGZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ED3-4u-shE"/>
+                            <constraint firstItem="zhL-d5-G3b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="HMI-h9-u8G"/>
+                            <constraint firstItem="gkB-m2-Vx8" firstAttribute="top" secondItem="pGx-Pm-Szu" secondAttribute="bottom" constant="26" id="MRS-2N-eKv"/>
+                            <constraint firstItem="pGx-Pm-Szu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NBZ-DN-utY"/>
+                            <constraint firstItem="zhL-d5-G3b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NJo-Y5-NXj"/>
+                            <constraint firstItem="mJd-9s-tbR" firstAttribute="top" secondItem="66P-5F-oGZ" secondAttribute="bottom" constant="24" id="RRi-J9-IXS"/>
+                            <constraint firstItem="0c9-G9-Rxc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="UOn-BO-19l"/>
+                            <constraint firstItem="0c9-G9-Rxc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-88" id="WJd-Uo-xM2"/>
+                            <constraint firstItem="mJd-9s-tbR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="asG-Ub-ggz"/>
+                            <constraint firstItem="Xxn-0Z-aD7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="co9-bi-l7O"/>
+                            <constraint firstItem="66P-5F-oGZ" firstAttribute="top" secondItem="gkB-m2-Vx8" secondAttribute="bottom" constant="8" id="eIX-BT-06l"/>
+                            <constraint firstItem="pGx-Pm-Szu" firstAttribute="top" secondItem="Xxn-0Z-aD7" secondAttribute="bottom" constant="31" id="hiV-aU-M1z"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="0c9-G9-Rxc" secondAttribute="bottom" constant="-34" id="otb-Tb-t1J"/>
+                            <constraint firstItem="Xxn-0Z-aD7" firstAttribute="top" secondItem="zhL-d5-G3b" secondAttribute="bottom" constant="29" id="qQ4-mP-9AD"/>
+                            <constraint firstItem="pGx-Pm-Szu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="tSX-5O-VKS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mbh-rk-3gc"/>
+                    <navigationItem key="navigationItem" id="mbh-rk-3gc">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GTr-yo-2qv">
+                            <rect key="frame" x="166.5" y="7" width="81" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="SAVE NOTE"/>
+                            <connections>
+                                <action selector="saveNoteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q9z-qP-1hn"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                     <connections>
                         <outlet property="body" destination="Xxn-0Z-aD7" id="hLy-ml-Zzu"/>
                         <outlet property="headline" destination="zhL-d5-G3b" id="RSy-VY-a5r"/>
@@ -135,4 +177,7 @@
             <point key="canvasLocation" x="1066.6666666666667" y="69.642857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="beerbckgrnd" width="1242" height="2208"/>
+    </resources>
 </document>

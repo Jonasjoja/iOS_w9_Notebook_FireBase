@@ -26,15 +26,15 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segue1", sender: self) //Perform the seque
+        performSegue(withIdentifier: "segue1", sender: self) //Perform the segue
+        
     }
-    
 
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        CloudStorage.createNote(head: "Hej min ven", body: "sker der G")
         tableView.delegate = self //Handle vents for tableview
         tableView.dataSource = self //Provide data for the tableview
         

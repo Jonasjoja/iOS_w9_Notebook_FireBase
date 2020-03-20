@@ -18,12 +18,38 @@ class CloudStorage{
     private static let db = Firestore.firestore()
     private static let storage = Storage.storage() //get instance of storage
     private static let notes = "notes"
+    private static let storageRef = storage.reference()
+    
+    
+    
+ public func uploadImageData(data: Data, serverFileName: String, completionHandler: @escaping (_ isSuccess: Bool, _ url: String?) -> Void) {
+    let storage = Storage.storage()
+     let storageRef = storage.reference()
+     // Create a reference to the file you want to upload
+     let directory = ""
+     let fileRef = storageRef.child(directory + serverFileName)
+     let imgMetaData = StorageMetadata()
+     imgMetaData.contentType = "image/jpeg";
+     
+     _ = fileRef.putData(data, metadata: imgMetaData) { metadata, error in
+         fileRef.downloadURL { (url, error) in
+             guard let downloadURL = url else {
+                 // Error occured
+                 completionHandler(false, nil)
+                 return
+             }
+             // File Uploaded Successfully
+             completionHandler(true, downloadURL.absoluteString)
+         }
+     }
+
+ }
     
     
     static func downloadImage(name:String, vc:ViewController) //method to download img
     {
         let imgRef = storage.reference(withPath: name) //Ref to specific img
-        imgRef.getData(maxSize: 4000000) { (data, error) in
+        imgRef.getData(maxSize: 99999999) { (data, error) in
             if error == nil {
                 print("success downloading img")
                 //Set image using viewcontroller
@@ -61,20 +87,6 @@ class CloudStorage{
         
     }
     
-    //Read func
-    static func readNotes(){
-        db.collection(notes).getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("error getting doc")
-            } else {
-                for document in querySnapshot!.documents {
-                    document.data()
-                }
-            }
-            
-        }
-    }
-    
     //getnote at
     static func getNoteAt(index:Int) -> Note{
         return list[index]
@@ -92,11 +104,14 @@ class CloudStorage{
     }
     
     //Delete func
-    static func deleteNote(id:String){
-        //Reference to the database, "notes" and passing it the specificed document id
-        let docRef = db.collection(notes).document(id)
+    static func deleteNote(index:Int){
+        //get the id
+        let note = list[index]
+        let docRef = db.collection(notes).document(note.id)
         docRef.delete()
     }
+    
+   
     //Update func, index, head, body
     static func updateNote(index:Int,head:String,body:String){
         //get the id
