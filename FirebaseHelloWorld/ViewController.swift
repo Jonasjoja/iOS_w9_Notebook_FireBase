@@ -35,19 +35,20 @@ class ViewController: UIViewController {
         body.text = note.body
         if note.imageid != "empty" { //Checks if there is an image
             CloudStorage.downloadImage(name: note.imageid, vc: self)
-           // CloudStorage.createNote(head: "Hej min ven", body: "sker der G")
         }
         
     }
-
+    
+    
+    
     @IBAction func downloadBtnPressed(_ sender: Any) {
         let image = images.randomElement()!
         print(images.count)
         //Calls download img and prints success
         CloudStorage.downloadImage(name: image, vc:self)
-
-        
     }
+    
+    
 
     @IBAction func uploadImgBtn(_ sender: Any) {
     pickImage()

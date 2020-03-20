@@ -46,6 +46,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
 
+    @IBAction func newNoteBtn(_ sender: Any) {
+        CloudStorage.createNote(head: "New note! Press to edit", body: "Enter your text here")
+    }
     
     
 
